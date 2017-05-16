@@ -97,6 +97,52 @@ public class ArrayASociativoTest {
 	}
 	
 	
+	@Test
+	public void TestPut3(){
+		ArrayAsociativo aa=new ArrayAsociativo(new String[]{"Nombre"}, new String[]{"Julia"});
+		try{
+			aa.put("Nombre", "Arjona");
+			System.out.println(aa.get("Nombre"));
+		}catch(Exception e){
+			fail("no deberia lanzar excepcion put2");
+		}
+	}
+	
+	@Test
+	public void testGetOrElse1(){
+		ArrayAsociativo aa=new ArrayAsociativo();
+		
+		System.out.println(aa.getOrElse("Nombre","pepe"));
+		
+		
+		aa=null;
+	}
+	
+	@Test
+	public void testgetOrElse2(){
+		ArrayAsociativo aa=new ArrayAsociativo(new String[]{"Nombre"}, new String[]{"Julia"});
+		
+		System.out.println(aa.getOrElse("Nombre", "Pepe"));
+		
+		aa=null;
+	}
+	
+	@Test
+	public void testgetOrElse3(){
+		ArrayAsociativo aa=new ArrayAsociativo(new String[]{"Nombre"}, new String[]{"Julia"});
+		
+		
+		System.out.println(aa.getOrElse("Apellidos", "Pepe"));
+		
+		aa=null;
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

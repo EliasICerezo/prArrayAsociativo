@@ -88,6 +88,30 @@ public class ArrayAsociativo {
 			
 			
 		}
+		
+		
+		public String getOrElse(String clave, String pordefecto){
+			Nodo n=primero;
+			String res=pordefecto;
+			boolean f=false;
+			while(n!=null && !f){
+				if(n.clave.equals(clave)){
+					f=true;
+				}else{
+					n=n.sig;
+				}
+				
+			}
+			
+			if(f){
+				res=n.valor;
+			}
+			return res;
+			
+			
+			
+		}
+		
 			
 }
 		
