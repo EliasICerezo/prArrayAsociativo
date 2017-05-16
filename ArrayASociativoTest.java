@@ -18,5 +18,14 @@ public class ArrayASociativoTest {
 		
 	}
 	
+	@Test
+	public void TestConstructor(){
+		ArrayAsociativo aa=new ArrayAsociativo(new String[]{"Nombre"}, new String[]{"Julia"});
+		
+		assertEquals(1,aa.size());
+		
+		aa=null;
+	}
+	
 	
 }
