@@ -138,6 +138,14 @@ public class ArrayASociativoTest {
 	}
 	
 	
+	@Test
+	public void testContains(){
+		ArrayAsociativo aa=new ArrayAsociativo();
+		
+		assertFalse(aa.containsKey("aaaaa"));
+		
+		aa=null;
+	}
 	
 	
 	

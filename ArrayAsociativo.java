@@ -112,6 +112,21 @@ public class ArrayAsociativo {
 			
 		}
 		
+		public boolean containsKey(String clave){
+			boolean f=false;
+			Nodo n=primero;
+			while(n!=null && !f){
+				if(n.clave.equals(clave)){
+					f=true;
+				}else{
+					n=n.sig;
+				}
+				
+			}
+			
+			return f;
+		}
+		
 			
 }
 		
