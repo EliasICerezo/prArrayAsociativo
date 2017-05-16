@@ -65,9 +65,35 @@ public class ArrayAsociativo {
 			
 		}
 		
-		
-		
-	
-	
-	
+		public void put(String clave, String valor){
+			Nodo n=primero; 
+			boolean f=false;
+			
+			while(n!=null && !f){
+				if(n.clave.equals(clave)){
+					f=true;
+				}else{
+					n=n.sig;
+				}
+				
+			}
+			
+			if(!f){
+				Nodo nuevo=new Nodo(clave,valor,primero);
+				primero=nuevo;
+				nele++;
+			}else{
+				n.valor=valor;
+			}
+			
+			
+		}
+			
 }
+		
+		
+		
+	
+	
+	
+

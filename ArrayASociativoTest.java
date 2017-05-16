@@ -73,6 +73,30 @@ public class ArrayASociativoTest {
 	}
 	
 	
+	@Test
+	public void TestPut1(){
+		ArrayAsociativo aa=new ArrayAsociativo();	
+		
+		try{
+			aa.put("Nombre", "Julia");
+		}catch(Exception e){
+			fail("no deberia lanzar excepcion put1");
+		}
+		aa=null;
+	}
+	
+	@Test
+	public void TestPut2(){
+		ArrayAsociativo aa=new ArrayAsociativo(new String[]{"Nombre"}, new String[]{"Julia"});
+		try{
+			aa.put("Apellidos", "Arjona");
+			System.out.println(aa.get("Apellidos"));
+		}catch(Exception e){
+			fail("no deberia lanzar excepcion put2");
+		}
+	}
+	
+	
 	
 	
 	
