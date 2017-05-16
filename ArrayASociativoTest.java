@@ -37,7 +37,7 @@ public class ArrayASociativoTest {
 			fail("Se esperaba una excepcion");
 			
 		}catch(Exception e){
-			System.out.println("Exception capturada");
+			System.out.println("Exception capturada test get 1");
 		}
 		
 		aa=null;
@@ -50,12 +50,30 @@ public class ArrayASociativoTest {
 		try{
 			System.out.println(aa.get("Nombre"));
 		}catch(Exception e){
-			fail("No seberia lanzar excepcion");
+			fail("No deberia lanzar excepcion");
 		}
 		
 		aa=null;
 		
 	}
+	
+	@Test
+	public void TestGet3(){
+		ArrayAsociativo aa=new ArrayAsociativo(new String[]{"Nombre"}, new String[]{"Julia"});
+		
+		try{
+			aa.get("Apellidos");
+			fail("Deberia lanzar excepcion");
+		}catch(Exception e){
+			System.out.println("Excepcion capturada para test 3");
+		}
+		
+		aa=null;
+		
+	}
+	
+	
+	
 	
 	
 	
