@@ -139,13 +139,32 @@ public class ArrayASociativoTest {
 	
 	
 	@Test
-	public void testContains(){
+	public void testContains1(){
 		ArrayAsociativo aa=new ArrayAsociativo();
 		
 		assertFalse(aa.containsKey("aaaaa"));
 		
 		aa=null;
 	}
+	
+	@Test
+	public void testContains2(){
+		ArrayAsociativo aa=new ArrayAsociativo(new String[]{"Nombre"}, new String[]{"Julia"});
+		
+		assertFalse(aa.containsKey("Apellidos"));
+		
+		aa=null;
+	}
+	
+	@Test
+	public void testContains3(){
+		ArrayAsociativo aa=new ArrayAsociativo(new String[]{"Nombre"}, new String[]{"Julia"});
+		
+		assertTrue(aa.containsKey("Nombre"));
+		
+		aa=null;
+	}
+	
 	
 	
 	
