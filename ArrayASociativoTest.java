@@ -166,6 +166,34 @@ public class ArrayASociativoTest {
 	}
 	
 	
+	@Test
+	public void testRemove1(){
+		ArrayAsociativo aa=new ArrayAsociativo();
+		
+		assertFalse(aa.remove("aaaa"));
+		
+		aa=null;
+	}
+	
+	@Test
+	public void testRemove2(){
+		ArrayAsociativo aa=new ArrayAsociativo(new String[]{"Nombre"}, new String[]{"Julia"});
+		
+		assertTrue(aa.remove("Nombre"));
+		
+		aa=null;
+	}
+	
+	@Test
+	public void testRemve3(){
+		ArrayAsociativo aa=new ArrayAsociativo(new String[]{"Nombre"}, new String[]{"Julia"});
+		
+		assertFalse(aa.remove("Apellidos"));
+		
+		aa=null;
+	}
+	
+	
 	
 	
 	

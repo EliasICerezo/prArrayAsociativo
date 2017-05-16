@@ -127,6 +127,32 @@ public class ArrayAsociativo {
 			return f;
 		}
 		
+		
+		public boolean remove(String key){
+			boolean ok=false;
+			Nodo n=primero; 
+			Nodo p=n;
+			boolean f=false;
+			
+			while(n!=null && !f){
+				if(n.clave.equals(key)){
+					f=true;
+				}else{
+					p=n;
+					n=n.sig;
+				}
+				
+			}
+			
+			if(f){
+				p.sig=n.sig;
+				n=null;
+				ok=true;
+				System.gc();
+			}
+			
+			return ok;
+		}
 			
 }
 		
